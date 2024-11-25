@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MobileTerm</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+</head>
+<body>
+    <div id="mobile-terminal">
+        <div class="terminal-header">
+            <span class="device-name" id="deviceName">Мое Устройство</span>
+            <div class="status-bar">
+                <span id="batteryLevel">100%</span>
+                <span id="currentTime">00:00</span>
+            </div>
+        </div>
+        
+        <div class="terminal-output" id="terminalOutput"></div>
+        
+        <div class="terminal-input">
+            <span class="prompt">$</span>
+            <input 
+                type="text" 
+                id="commandInput" 
+                autocomplete="off" 
+                placeholder="Введите команду..."
+            >
+            <button class="send-btn" id="sendCommand">▶</button>
+        </div>
+        
+        <div class="keyboard-extensions">
+            <div class="quick-commands">
+                <button data-cmd="ls">ls</button>
+                <button data-cmd="pwd">pwd</button>
+                <button data-cmd="clear">clear</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
